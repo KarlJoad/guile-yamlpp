@@ -9,6 +9,20 @@
       (number? v)
       (null? v)))
 
+(define (output-yaml scm port indent-level)
+  (let ((next-indent-level (+ indent-level 2)))
+    (cond ((string? scm) (format port "~s" scm))
+          ((number? scm) (format port "~a" scm))
+          ((boolean? scm) (format port "~a" (if scm "true" "false")))
+          ((null? scm) (format port ""))
+          ((list? scm) (string-join (map (lambda (e) (output-yaml e port next-indent-level)) scm) "\n" 'infix))
+          ((and (pair? scm)
+                (symbol? (car scm)))
+           (format port "~a: ~a" (symbol->string (car scm))
+                   (output-yaml (cdr scm) port next-indent-level)))
+          (#t (error "Invalid alist element!")))))
+
+
 (define yml-list? list?)
 
 (define (yml-map? k v)
