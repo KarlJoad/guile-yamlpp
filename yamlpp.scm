@@ -44,9 +44,6 @@
       (yml-list? o)
       (yml-map? (car o) (cdr o))))
 
-(define alist->yml (config)
-  (map alist->yml ...))
-
 (define* (scm->yaml scm
                     #:optional (port (current-output-port))
                     #:key (unicode #t))
