@@ -1,4 +1,4 @@
-AC_INIT([Guile-Yamlpp], [0.1])
+AC_INIT([guile-yaml], [0.1])
 
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([color-tests parallel-tests -Wall -Werror foreign])

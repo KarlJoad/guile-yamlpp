@@ -1,4 +1,4 @@
-(define-module (yamlpp)
+(define-module (yaml)
   #:export (scm->yaml))
 
 ;; (define test '((colors (primary (background . "#000000") (foreground . "#ffffff")) (normal (red . "#ff5f59") (green "#44bc44")))))

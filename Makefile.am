@@ -17,7 +17,7 @@
 ## along with Gloa.  If not, see <http://www.gnu.org/licenses/>.
 
 SOURCES =                \
-  yamlpp.scm
+  yaml.scm
 
 EXTRA_DIST =            \
   README                \
