@@ -47,4 +47,4 @@
 (define* (scm->yaml scm
                     #:optional (port (current-output-port))
                     #:key (unicode #t))
-  (format port "scm->yaml~%"))
+  (output-yaml scm port 0))
