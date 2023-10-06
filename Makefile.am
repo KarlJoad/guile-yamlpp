@@ -43,6 +43,7 @@ $(guile_install_go_files): install-nobase_modDATA
 
 TESTS =                \
   tests/test-output-primitives.scm \
+  tests/test-config-generation.scm \
   tests/example.scm
 
 TEST_EXTENSIONS = .scm

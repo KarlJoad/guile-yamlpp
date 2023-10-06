@@ -1,8 +1,6 @@
 (define-module (yaml)
   #:export (scm->yaml))
 
-;; (define test '((colors (primary (background . "#000000") (foreground . "#ffffff")) (normal (red . "#ff5f59") (green "#44bc44")))))
-
 (define (yml-atom? v)
   "YAML atoms are one of either strings, integers, floats, or null."
   (or (string? v)
