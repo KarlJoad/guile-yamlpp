@@ -1,0 +1,12 @@
+#+TITLE: guile-yaml
+
+This Guile library is intended to make working with YAML files easier.
+guile-yaml is mainly intended to serialize a Scheme association list to a YAML file.
+
+NOTE: Currently guile-yaml does *not* support reading in a YAML file and constructing the alist right now!
+Perhaps it will in the future.
+
+guile-yaml closely follows the [[https://yaml.org/spec/1.2.2][latest YAML specification]].
+
+* Outputting YAML
+To output to YAML, use the ~scm->yaml~ procedure.
