@@ -13,7 +13,11 @@
           ((number? scm) (format port "~a" scm))
           ((boolean? scm) (format port "~a" (if scm "true" "false")))
           ((null? scm) (format port ""))
-          ((list? scm) (string-join (map (lambda (e) (output-yaml e port next-indent-level)) scm) "\n" 'infix))
+          ((list? scm)
+           (string-join
+            (map (lambda (e)
+                   (format port "- ~a" (output-yaml e port next-indent-level)))
+                 scm) "\n" 'infix))
           ((and (pair? scm)
                 (symbol? (car scm)))
            (format port "~a: ~a" (symbol->string (car scm))
