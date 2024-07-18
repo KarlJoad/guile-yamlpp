@@ -10,3 +10,7 @@ guile-yaml closely follows the [[https://yaml.org/spec/1.2.2][latest YAML specif
 
 * Outputting YAML
 To output to YAML, use the ~scm->yaml~ procedure.
+
+* Testing
+guile-yaml is tested with the [[https://github.com/yaml/yaml-test-suite][standard YAML test suite]] to ensure compliance with the YAML specification.
+The YAML test suite is published by the same group that develops YAML's specification.
