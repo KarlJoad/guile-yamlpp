@@ -1,1 +1,1 @@
-./.guix/modules/guile-yamlpp-package.scm
+./.guix/modules/guile-yaml-package.scm

@@ -10,7 +10,7 @@
 ;;
 ;;; Code:
 
-(define-module (guile-yamlpp-package)
+(define-module (guile-yaml-package)
   #:use-module (guix packages)
   #:use-module (gnu packages autotools)
   #:use-module (gnu packages guile)
@@ -31,19 +31,20 @@
   (or (git-predicate (string-append (current-source-directory) "/../.."))
       (const #t)))                                ;not in a Git checkout
 
-(define-public guile-yamlpp
+(define-public guile-yaml
   (package
-    (name "guile-yamlpp")
+    (name "guile-yaml")
     (version "checkout")
-    (source (local-file "../.." "guile-yamlpp-checkout"
+    (source (local-file "../.." "guile-yaml-checkout"
                         #:recursive? #t
                         #:select? vcs-file?))
     (build-system gnu-build-system)
     (native-inputs
      (list autoconf automake pkg-config texinfo guile-3.0))
-    (home-page "https://github.com/KarlJoad/guile-yamlpp.git")
-    (synopsis "Guile to YAML/YML pretty-printer")
-    (description "Guile to YAML/YML pretty-printer.")
-    (license #f)))
+    (home-page "https://github.com/KarlJoad/guile-yaml.git")
+    (synopsis "YAML/YML module for Guile")
+    (description "Guile-YAML supports parsing and building YAML files according
+to the specification.")
+    (license gpl3+)))
 
-guile-yamlpp
+guile-yaml
